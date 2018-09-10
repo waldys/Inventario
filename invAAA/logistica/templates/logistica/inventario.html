@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>AAA Dominicana</title>
+</nav>
+<style>
+
+table {
+    width:100%;
+    align: center;
+
+}
+table, th, td {
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+
+
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+table#t01 th {
+    background-color: #1E90FF;
+    color: white;
+}
+#contenido {
+  text-align: center;
+
+}
+#uno {
+  position: absolute;
+  left: 9%;
+  top: 100px;
+}
+#dos {
+  position: absolute;
+  left: 80%;
+  top: 100px;
+}
+#tres {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+}
+#D {
+    position: absolute;
+    left: 40%;
+    top: 100px;
+}
+
+#F {
+    position: absolute;
+    left: 80%;
+    top: 100px;
+}
+
+table#t02 td {
+    text-align: left;
+}
+</style>
+</head>
+<body >
+
+  <h1 id="contenido" style="color:#1E90FF">AAA Dominicana</h1>
+  <h4 id="contenido" style="color:#1E90FF">Inventarios de Informaticos</h4>
+  <hr style="color:#1E90FF" width=100%>
+  <h4 style="color:#1E90FF">Sede: {{equip.headquarter_name}} </h4>
+  <h4 id=D style="color:#1E90FF">Departamento: {{equip.department_name}} </h4>
+  <h4 id=F style="color:#1E90FF">Fecha:{{equip.iventory_date | date:'d-m-Y'}} </h4>
+
+  <div id="contenido">
+<h4></h4>
+<table id="t01" align=center>
+  <thead>
+    <tr>
+      <th>Codigo AMK</th>
+      <th>Cod proyecto</th>
+      <th>Tipo de activo</th>
+      <th>Marca</th>
+      <th>Serial</th>
+      <th>Estado</th>
+      <th>Observacion</th>
+      <th>Empleado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tbody class="searchable">
+        {% for e in equip.equipmentinv_set.all %}
+        <tr>
+            <td>{{e.cod_amerika}}</td>
+            <td>{{e.project}}</td>
+            <td>{{e.t_name}}</td>
+            <td>{{e.brand_name}}</td>
+            <td>{{e.serial}}</td>
+            <td>{{e.status}}</td>
+            <td>{{e.observation}}</td>
+            <td>{{e.employee_name}}</td>     
+        </tr>
+        {% endfor %} 
+
+        </tbody>
+
+  </tbody>
+</table>
+</div>
+<br>
+<br>
+<br>
+<footer>
+    <table id="t02">
+        <tr>
+
+             <td align=left>
+                Raalizado por: 
+                <br>
+                Nombre: _______________________
+                <br>
+                Filma:  _________________________
+             </td>
+             <td align= height>
+                Validado por:
+                <br>
+                Nombre:  _______________________
+                <br>
+                Filma:    _________________________
+            </td>
+        </tr>
+    </table>
+
+</footer>
+
+
+</body>
+</html>

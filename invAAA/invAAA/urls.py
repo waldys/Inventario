@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from logistica import views
+from django_pdfkit import PDFView
 
 urlpatterns = [
+    # path('prueba', views.Prueba.as_view(),name='prueba'),
     path('', admin.site.urls),
 ]
 #cambiar nombre sel sito administrativo djanfo
