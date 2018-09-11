@@ -19,10 +19,10 @@ from logistica import views
 from django_pdfkit import PDFView
 
 urlpatterns = [
-    # path('prueba', views.Prueba.as_view(),name='prueba'),
+    path('inventario', views.Inventario.as_view(),name='inventario'),
     path('', admin.site.urls),
 ]
-#cambiar nombre sel sito administrativo djanfo
+#cambiar nombre sel sito administrativo djanfop
 
 admin.site.site_header = 'AAA Dominicana'
 

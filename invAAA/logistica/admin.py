@@ -21,7 +21,7 @@ class InventoryAdmin(admin.ModelAdmin):
     search_fields = ['headquarter_name__headquarter_name','department_name__department_name','id','iventory_date']
     list_filter = ['headquarter_name']
     def show_firm_url(self, obj):
-        return format_html ('<a href="/prueba?id=%s">%s</a>' % (obj.id,obj.id))
+        return format_html ('<a href="/inventario?id=%s&inline">%s</a>' % (obj.id,'Imprimir'))
     show_firm_url.allow_tags = True
     show_firm_url.short_description='Imprimir'
 

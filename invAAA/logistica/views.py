@@ -6,14 +6,14 @@ from .models import EquipmentInv,Inventory
 # Create your views here.
 
 
-class Prueba(PDFView):
+class Inventario(PDFView):
     
    
     template_name = "logistica/inventario.html"
 
     def  get_context_data(self, **kwargs):
         id_inventario =str(self.request.GET.get('id'))
-      
+        inline=True
         context = super().get_context_data(**kwargs)
         equip = Inventory.objects.get(pk=id_inventario)
 
