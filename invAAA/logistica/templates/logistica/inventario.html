@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <title>AAA Dominicana</title>
 </nav>
 <style>
@@ -57,23 +57,27 @@ table#t01 th {
 
 #F {
     position: absolute;
-    left: 80%;
+    left: 83%;
     top: 100px;
 }
 
 table#t02 td {
     text-align: left;
 }
+table#t02 td#t2 {
+    text-align: right;
+    
+}
 </style>
 </head>
 <body >
 
   <h1 id="contenido" style="color:#1E90FF">AAA Dominicana</h1>
-  <h4 id="contenido" style="color:#1E90FF">Inventarios de Informaticos</h4>
+  <h4 id="contenido" style="color:#1E90FF">Inventarios de Equipos Informaticos</h4>
   <hr style="color:#1E90FF" width=100%>
   <h4 style="color:#1E90FF">Sede: {{equip.headquarter_name}} </h4>
   <h4 id=D style="color:#1E90FF">Departamento: {{equip.department_name}} </h4>
-  <h4 id=F style="color:#1E90FF">Fecha:{{equip.iventory_date | date:'d-m-Y'}} </h4>
+  <h4 id=F style="color:#1E90FF">Fecha: {{equip.iventory_date | date:'d-m-Y'}} </h4>
 
   <div id="contenido">
 <h4></h4>
@@ -117,19 +121,24 @@ table#t02 td {
     <table id="t02">
         <tr>
 
-             <td align=left>
+             <td>
                 Raalizado por: 
+                <br>
                 <br>
                 Nombre: _______________________
                 <br>
+                <br>
                 Filma:  _________________________
              </td>
-             <td align= height>
-                Validado por:
+
+             <td >
+                &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Validado por:
                 <br>
-                Nombre:  _______________________
                 <br>
-                Filma:    _________________________
+                &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Nombre:  _______________________
+                <br>
+                <br>
+                &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Filma:    _________________________
             </td>
         </tr>
     </table>

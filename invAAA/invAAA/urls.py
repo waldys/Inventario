@@ -14,15 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from logistica import views
 from django_pdfkit import PDFView
 
 urlpatterns = [
+    #path('grappelli/', include('grappelli.urls')),
+    path('jet/', include ('jet.urls','jet')),
     path('inventario', views.Inventario.as_view(),name='inventario'),
     path('', admin.site.urls),
 ]
-#cambiar nombre sel sito administrativo djanfop
+#cambiar nombre sel sito administrativo django
 
 admin.site.site_header = 'AAA Dominicana'
 

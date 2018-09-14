@@ -31,8 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ubicacion',
     'logistica',
     'entidades',
+    #'bootstrap_admin',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,7 +81,7 @@ WSGI_APPLICATION = 'invAAA.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'invenatriDB',
+        'NAME': 'ControlDB',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
@@ -124,3 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+JET_DEFAULT_THEME = 'default'
+
